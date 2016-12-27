@@ -19,16 +19,14 @@ Show the next talk today:
 33c3
 ```
 
-Choose a day manually:
+Get help using the `--help` option:
 
 ```
-33c3 -m
-```
+Usage: 33c3 [options]
 
-To show help, run:
-
-```
-33c3 --help
+ --help, -h    Show this help
+ --manual, -m  Prompt for day (default to upcoming talk)
+ --update, -u  Update schedule with new changes
 ```
 
 ## License
