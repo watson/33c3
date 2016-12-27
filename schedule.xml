@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <schedule>
-<version>NOT OUR BUG</version>
+<version>NOT A BUG</version>
 <conference>
 <acronym>33c3</acronym>
 <title>33. Chaos Communication Congress</title>
@@ -233,6 +233,7 @@ We will detail how the jailbreak techniques used by this software have changed a
 <link href='https://blog.lookout.com/blog/2016/08/25/trident-pegasus/'>Sophisticated, persistent mobile attack against high-value targets on iOS</link>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/111/original/33c3-Max-Bazaliy-Pegasus-Internals.pdf?1482864115'>Pegasus Internals</attachment>
 </attachments>
 </event>
 <event guid='361946ca-4577-467d-b608-022c8a2d3164' id='8033'>
@@ -1273,6 +1274,7 @@ The internals of the language implementation changed quite dramatically, and now
 </links>
 <attachments>
 <attachment href='/system/event_attachments/attachments/000/003/036/original/33c3-wifi.pdf?1475269216'>Research paper</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/109/original/33c3-broadkey-slides.pdf?1482855826'>Presentation</attachment>
 </attachments>
 </event>
 <event guid='f62fb3be-656f-4e7b-9619-11f3cdb2da26' id='7925'>
@@ -4197,7 +4199,7 @@ Erik Bosman is a PhD student in the Systems and Network Security group at the Vr
 Antonio
 Antonio Barresi is Co-founder and CEO of xorlab, a Swiss IT security company. Before founding xorlab, he worked at the Laboratory for Software Technology (LST) at ETH Zurich on software security related topics. His research interests are software and systems security. Before joining LST, he worked in industry as a Software Engineer, Security Consultant, and IT Risk Officer. He holds a BSc and MSc degree in Computer Science from ETH Zurich.
 </description>
-<logo></logo>
+<logo>/system/events/logos/000/008/022/large/memdedup_logo.PNG?1482858644</logo>
 <persons>
 <person id='6914'>Ben Gras</person>
 <person id='7219'>Kaveh Razavi</person>
@@ -4207,6 +4209,7 @@ Antonio Barresi is Co-founder and CEO of xorlab, a Swiss IT security company. Be
 <links>
 <link href='http://www.vusec.net/projects/flip-feng-shui/'>Flip Feng Shui project page</link>
 <link href='https://www.vusec.net/projects/dedup-est-machina/'>Dedup Est Machina project page</link>
+<link href='https://xorlab.com/blog/2015/07/30/cain/'>CAIN blog article</link>
 </links>
 <attachments>
 </attachments>
