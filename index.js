@@ -91,7 +91,7 @@ function chooseTalk (schedule, selected) {
   var questions = [{
     type: 'list',
     name: 'talk',
-    message: 'Choose Day ' + schedule.$.index + ' Talk',
+    message: 'Choose Talk - Day ' + schedule.$.index,
     choices: choices,
     default: selected || 0
   }]
