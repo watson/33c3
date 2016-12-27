@@ -4,9 +4,7 @@
 var fs = require('fs')
 var xml2js = require('xml2js')
 var inquirer = require('inquirer')
-var ui = require('cliui')({
-  width: 80
-})
+var ui = require('cliui')({width: 80})
 
 fs.readFile('schedule.xml', function (err, xml) {
   if (err) throw err
@@ -30,8 +28,6 @@ function chooseDay (schedule) {
 function chooseTalk (schedule) {
   var choices = []
   schedule.room.forEach(function (room, roomIndex) {
-    // var name = room.$.name
-    // console.log(name)
     if (!room.event) return
     room.event.forEach(function (event, index) {
       choices.push({name: event.start + ': ' + event.title[0], value: {room: roomIndex, event: index, date: new Date(event.date[0])}})
