@@ -25,8 +25,9 @@ function chooseDay (schedule) {
   })
 }
 
-function chooseTalk (schedule) {
+function chooseTalk (schedule, selected) {
   var choices = []
+  var totalIndex = 0
   schedule.room.forEach(function (room, roomIndex) {
     if (!room.event) return
     room.event.forEach(function (event, index) {
@@ -34,13 +35,17 @@ function chooseTalk (schedule) {
     })
   })
 
-  choices = choices.sort(function (a, b) {
-    return a.value.date.getTime() - b.value.date.getTime()
-  })
+  choices = choices
+    .sort(function (a, b) {
+      return a.value.date.getTime() - b.value.date.getTime()
+    }).map(function (choice) {
+      choice.value.index = totalIndex++
+      return choice
+    })
 
-  inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices}]).then(function (answers) {
+  inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices, default: selected || 0}]).then(function (answers) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
-    chooseTalk(schedule)
+    chooseTalk(schedule, answers.talk.index)
   })
 }
 
