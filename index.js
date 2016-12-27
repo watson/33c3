@@ -4,7 +4,7 @@
 var fs = require('fs')
 var xml2js = require('xml2js')
 var inquirer = require('inquirer')
-var ui = require('cliui')({width: 80})
+var cliui = require('cliui')
 
 fs.readFile('schedule.xml', function (err, xml) {
   if (err) throw err
@@ -40,14 +40,18 @@ function chooseTalk (schedule) {
 
   inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices}]).then(function (answers) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
+    chooseTalk(schedule)
   })
 }
 
 function printTalk (talk) {
+  var ui = cliui({width: 80})
+  ui.div()
   ui.div({text: 'Room', width: 10}, {text: talk.room[0], width: 70})
   ui.div({text: 'Time', width: 10}, {text: talk.start[0], width: 70})
   ui.div({text: 'Title', width: 10}, {text: talk.title[0], width: 70})
   ui.div({text: 'Subtitle', width: 10}, {text: talk.subtitle[0], width: 70})
   ui.div({text: 'Abstract', width: 10}, {text: talk.abstract[0], width: 70})
+  ui.div()
   console.log(ui.toString())
 }
