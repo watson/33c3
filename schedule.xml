@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <schedule>
-<version>WORKS FOR ME</version>
+<version>NOT OUR BUG</version>
 <conference>
 <acronym>33c3</acronym>
 <title>33. Chaos Communication Congress</title>
@@ -790,6 +790,7 @@ TLS 1.3 is not in the distant future. The draft is almost finalized, and at Clou
 <logo></logo>
 <persons>
 <person id='6145'>Filippo Valsorda</person>
+<person id='5003'>Nick Sullivan</person>
 </persons>
 <links>
 </links>
@@ -812,42 +813,17 @@ TLS 1.3 is not in the distant future. The draft is almost finalized, and at Clou
 <type>lecture</type>
 <language>en</language>
 <abstract>In this talk we will explore and present various IPv6 scanning techniques that allow attackers to peek into IPv6 networks. With the already known difference between IPv4 and IPv6 firewalling (the latter is worse... ) we then demonstrate how these techniques can be combined and used to obtain a large-scale view on the state of IPv6 in infrastructures and data centers. To give the whole issue a somewhat more fun dimension, we will also look at some (security) sensitive applications of this technique. Complimentary code-snippets will be provided.</abstract>
-<description>Scanning networks is a basic tool for security researchers. Software
-misconfiguration like with unprotected key-value stores and  software bugs like
-heartbleed are analyzed and investigated in the wild using scanning of
-networks.
+<description>Scanning networks is a basic tool for security researchers. Software misconfiguration like with unprotected key-value stores and  software bugs like heartbleed are analyzed and investigated in the wild using scanning of networks.
 
-At least since the rise of zMap, scanning the I---Pv4---nternet has become a
-rather simple endeavour. When one happens to be at a conference that tends to
-supply 1gE or 10gE ports on the access layer, scanning the Internet can be done
-in 60-10 Minutes. Scanning the 2^32 possible addresses (with certain
-limitations) of IPv4 has become cheap.
+At least since the rise of zMap, scanning the I---Pv4---nternet has become a rather simple endeavour. When one happens to be at a conference that tends to supply 1gE or 10gE ports on the access layer, scanning the Internet can be done in 60-10 Minutes. Scanning the 2^32 possible addresses (with certain limitations) of IPv4 has become cheap.
 
-However, the small searchspace of IPv4 that makes it so scannable is also what
-renders it increasingly obsolete. To overcome this issue, IPv6 was designed.
-Along with IPv6 we receive a theoretical maximum of 2^128 different addresses.
-Scanning this larger space is a challenge that---so far---has been mostly
-approached by researchers. Specifically, not security but network measurement
-researchers. Their works usually focus on having access to large datasets of 
-IPv6 addresses, the most famous ones using the access logs of a large CDN. 
+However, the small searchspace of IPv4 that makes it so scannable is also what renders it increasingly obsolete. To overcome this issue, IPv6 was designed. Along with IPv6 we receive a theoretical maximum of 2^128 different addresses. Scanning this larger space is a challenge that---so far---has been mostly approached by researchers. Specifically, not security but network measurement researchers. Their works usually focus on having access to large datasets of  IPv6 addresses, the most famous ones using the access logs of a large CDN. 
 
-With the average nerd lacking a small enterprise scale CDN in the basement, we 
-set out to utilize other techniques for enumerating IPv6 that only utilizes
-public data sources. Following RFC7707, we found various interesting candidate
-techniques. Especially probing the PTR sets of IPv6 networks sounded promising.
+With the average nerd lacking a small enterprise scale CDN in the basement, we set out to utilize other techniques for enumerating IPv6 that only utilizes public data sources. Following RFC7707, we found various interesting candidate techniques. Especially probing the PTR sets of IPv6 networks sounded promising.
 
-However, when implementing the techniques, we had to realize that these were not
-yet ready to be used on a global scale. During the last couple of months we 
-discovered pitfalls, adjusted the tools and ran enumerations.
+However, when implementing the techniques, we had to realize that these were not yet ready to be used on a global scale. During the last couple of months we discovered pitfalls, adjusted the tools and ran enumerations.
 
-In this talk we will present the approaches we used to enumerate IPv6. From
-this presentation, the average person in the audience should be able to easily
-implement these tools for them self---with subsequent &quot;spasz am geraet&quot;.
-Furthermore, we will present anecdotes, case-studies and investigations on the
-data we gathered so far. This includes peeks into transit networks of large
-ISPs, datacenters of global cloud providers and a suprisingly high amount of
-things one would not expect (or hope to be) on the Internet.
-</description>
+In this talk we will present the approaches we used to enumerate IPv6. From this presentation, the average person in the audience should be able to easily implement these tools for them self---with subsequent &quot;spasz am geraet&quot;. Furthermore, we will present anecdotes, case-studies and investigations on the data we gathered so far. This includes peeks into transit networks of large ISPs, datacenters of global cloud providers and a suprisingly high amount of things one would not expect (or hope to be) on the Internet.</description>
 <logo></logo>
 <persons>
 <person id='6948'>Tobias Fiebig</person>
@@ -1074,12 +1050,13 @@ Bildcredit: Konrad Twardowski, CC BY-SA 2.0</description>
 <link href='https://fsfe.org/activities/radiodirective/'>Informationen zur Funkabschottung</link>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/107/original/20161227-mm-33C3.de.pdf?1482843619'>Slides (German)</attachment>
 </attachments>
 </event>
 <event guid='c3844820-b5ed-4b12-9094-cfc67aff60be' id='8014'>
 <date>2016-12-27T18:15:00+01:00</date>
 <start>18:15</start>
-<duration>00:30</duration>
+<duration>01:00</duration>
 <room>Saal G</room>
 <slug>33c3-8014-untrusting_the_cpu</slug>
 <recording>
@@ -1108,35 +1085,6 @@ I will outline the implementation problem areas of this approach and some possib
 <person id='6903'>jaseg</person>
 </persons>
 <links>
-</links>
-<attachments>
-</attachments>
-</event>
-<event guid='dca06c58-ad2a-4b14-8be6-e6422e0dc94f' id='8274'>
-<date>2016-12-27T19:00:00+01:00</date>
-<start>19:00</start>
-<duration>00:30</duration>
-<room>Saal G</room>
-<slug>33c3-8274-back_to_the_16bit_era_--_cancelled</slug>
-<recording>
-<license>CC BY 4.0</license>
-<optout>false</optout>
-</recording>
-<title>Back to the 16bit Era -- CANCELLED</title>
-<subtitle>Open Sourcing a 22 Years Old Game</subtitle>
-<track>Hardware &amp; Making</track>
-<type>lecture</type>
-<language>en</language>
-<abstract>Talk cancelled due to illness.</abstract>
-<description>Talk cancelled due to illness.</description>
-<logo></logo>
-<persons>
-<person id='6994'>kirschju</person>
-</persons>
-<links>
-<link href='https://kirschju.re/static/W1L3.png'>Sample Dump of Level 1-3</link>
-<link href='https://kirschju.re/static/W2L1.png'>Sample Dump of Level 2-1</link>
-<link href='https://kirschju.re/static/editor.png'>Sample Screenshot of the Vi-Like Map Editor</link>
 </links>
 <attachments>
 </attachments>
@@ -1266,6 +1214,7 @@ This talk will present Certificate Transparency in full details. Beginning from 
 <links>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/104/original/33c3_CT.pdf?1482832180'>Slides</attachment>
 </attachments>
 </event>
 <event guid='798573a8-f544-48f0-abaf-ebc405f03f4a' id='7858'>
@@ -1381,37 +1330,7 @@ Her practice evolved from visual arts, journalism, internet culture and publishi
 <links>
 </links>
 <attachments>
-</attachments>
-</event>
-<event guid='3eadf072-8762-461d-a210-a3ea4df66e8a' id='8045'>
-<date>2016-12-27T17:30:00+01:00</date>
-<start>17:30</start>
-<duration>00:30</duration>
-<room>Saal 6</room>
-<slug>33c3-8045-0en_1en_auf_dem_acker</slug>
-<recording>
-<license>CC BY 4.0</license>
-<optout>false</optout>
-</recording>
-<title>0en &amp; 1en auf dem Acker</title>
-<subtitle>Was die Sensor &amp; Automatisierungstechnik in der Landwirtschaft heute schon leisten kann – Ein Einblick</subtitle>
-<track>Science</track>
-<type>lecture</type>
-<language>de</language>
-<abstract>Die Dynamik der globalen Agrarmärkte hat sich in den letzten Jahren verstärkt und birgt neue Herausforderungen für die Landwirte. Hoffnungsträger sind ähnlich wie in anderen Branchen auch Sensor- &amp; Datenverarbeitungstechnik sowie das Internet: Produktionsprozesse steuern sich selbst, Anhänger werden halbautomatisch mittels Bilderkennung beladen, Maschinen kommunizieren mittels Maschinen und Fahrzeuge steuern sich weitestgehend schon jetzt autonom.
-</abstract>
-<description>Die Dynamik der globalen Agrarmärkte hat sich in den letzten Jahren verstärkt und birgt neue Herausforderungen für die Landwirte. Ebenso ändert sich das vielfach verbreitete Berufsbild des Landwirts oder des Bauers zunehmend hin zu einem landwirtschaftlichen Unternehmer, der das komplette Spektrum des aktuellen Standes des Technik einzusetzen vermag. Themen wie Ressourcenknappheit, Veränderungen im Klima sowie die weltweit steigende Nachfrage nach Nahrungsmitteln und nachwachsenden Rohstoffen zwingen dabei auch in Deutschland die Bauern bzw. landwirtschaftlichen Unternehmer über neue Strategien und Arbeitstechniken nachzudenken um Produktivität und Effizienz zu steigern.
-Die rasante Entwicklung in der Sensor- &amp; Datenverarbeitungstechnik in Verbindung mit dem Internet ist dabei einer der Schlüssel der helfen kann den aktuellen Herausforderungen der Landwirtschaft zu begegnen. Dabei sind – ohne dass ein Großteil der Bevölkerung dies vermuten würde – gerade in der Landwirtschaft und dem landwirtschaftlichen kommunalen Dienstleistungssektor große Fortschritte in Arbeitsabläufen und Arbeitserledigungen vollzogen worden. Es darf dabei – gänzlich modern &amp; smart von Landwirtschaft 4.0 gesprochen werden: Produktionsprozesse steuern sich selbst, Anhänger werden halbautomatisch mittels Bilderkennung beladen, Maschinen kommunizieren mittels Maschinen und Fahrzeuge steuern sich weitestgehend schon jetzt autonom.</description>
-<logo>/system/events/logos/000/008/045/large/Trecker_im_Schnee.jpg?1481063171</logo>
-<persons>
-<person id='6938'>Fritz Herzrasen</person>
-<person id='6991'>Lisa Tschorn</person>
-</persons>
-<links>
-</links>
-<attachments>
-<attachment href='/system/event_attachments/attachments/000/002/973/original/33C3-Vortrag-Abstract.pdf?1475073318'>33C3-Vortrag-Abstract.pdf</attachment>
-<attachment href='/attachments/original/missing.png'>file</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/108/original/Privacy__ccc_last.pdf?1482847358'>Privacy__ccc_last.pdf</attachment>
 </attachments>
 </event>
 <event guid='600ca67d-e18d-49d8-8e5d-08d5b38ec528' id='7999'>
@@ -2078,7 +1997,8 @@ We have currently developed an open source tool in alpha stage in collaboration 
 Findings from investigations have been used by Human Rights Watch, the United Nations Security Council and the Organisation for the Prevention of Chemical Weapons in their work investigating the Syrian conflict. Further, research has been cross-published by Bellingcat, an award-winning open source investigation platform and partner to the project.</description>
 <logo>/system/events/logos/000/007/909/large/TSA2.jpg?1473779744</logo>
 <persons>
-<person id='6068'>Syrian Archive</person>
+<person id='6068'>Jeff Deutch</person>
+<person id='7289'>Hadi Al-Khatib</person>
 </persons>
 <links>
 <link href='https://syrianarchive.org'>Syrian Archive</link>
@@ -2101,9 +2021,9 @@ Findings from investigations have been used by Human Rights Watch, the United Na
 <track>Science</track>
 <type>lecture</type>
 <language>en</language>
-<abstract>The Anthropocene is widely understood to mean the current &lt;em&gt;&amp;quot;period of Earth's history during which humans have a decisive influence on the state, dynamics and future&amp;quot;&lt;/em&gt; of this planet. For several years, scientists in the &lt;a href=&quot;http://quaternary.stratigraphy.org/workinggroups/anthropocene/&quot; title=&quot;Website of the Working Group on the &amp;#39;Anthropocene&amp;#39; (AWG)&quot;&gt;Working Group on the 'Anthropocene' (AWG)&lt;/a&gt; have &lt;a href=&quot;https://www2.le.ac.uk/offices/press/press-releases/2016/august/media-note-anthropocene-working-group-awg&quot; title=&quot;Media note on AWG recommendations&quot;&gt;worked (and voted!)&lt;/a&gt; on defining the beginning of the Anthropocene in geochemical terms. The mid-20&lt;sup&gt;th&lt;/sup&gt; century provides an obvious geochemical 'timestamp': fallout from &lt;a href=&quot;https://media.ccc.de/v/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker&quot; title=&quot;Michael Büker&amp;#39;s &amp;#39;What Ever Happened to Nuclear Weapons?&amp;#39; talk at 31c3&quot;&gt;nuclear weapons detonations&lt;/a&gt;. Which other chemicals and timestamps are being considered for marking the Anthropocene's start? How is 'define-by-committee' even working out for &lt;a href=&quot;http://www.stratigraphy.org/index.php/ics-chart-timescale&quot; title=&quot;International Chronostratigraphic Chart AKA Geological Timescale&quot;&gt;geological epochs&lt;/a&gt;? This talk boils the scientific background of the Anthropocene debate down for non-stratigraphers. We'll also learn about potential environmental trajectories, and the choices we and our civilisation will face in a geological epoch of our own making.</abstract>
-<description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stratigraphy&quot; title=&quot;Wikipedia: Stratigraphy&quot;&gt;Stratigraphers&lt;/a&gt; are geologists, who focus on sediment, rock or ice layers, etc. These 'strata' form by deposition of organic or inorganic material (such as microorganisms or volcanic ash). Over time, upper strata compress the lower ones into permanent records of the history of our planet's surface. Because chemical signals such as gas bubbles, isotopes, etc. are captured in the strata, scientists can analyse the geochemistry of the past, date certain events, and more. That kind of data ultimately underlies &lt;a href=&quot;https://xkcd.com/1732/&quot; title=&quot;xkcd comic &amp;#39;Earth Temperature Timeline&amp;#39;&quot;&gt;xkcd's recent 'Earth Temperature Timeline'&lt;/a&gt;. Direct measurements of geochemical signals such as &lt;a href=&quot;https://scripps.ucsd.edu/programs/keelingcurve/&quot; title=&quot;Keeling curve of CO2 concentrations&quot;&gt;atmospheric CO&lt;sub&gt;2&lt;/sub&gt; concentration&lt;/a&gt; and ocean pH has started in the mid-20&lt;sup&gt;th&lt;/sup&gt; century.&lt;/p&gt;
-&lt;p&gt;Besides the &lt;a href=&quot;https://ipcc.ch/&quot; title=&quot;Website of the Intergovernmental Panel on Climate Change&quot;&gt;Intergovernmental Panel on Climate Change&lt;/a&gt;, the AWG is possibly the scientific committee with most public attention currently. It is composed of (specialised) geologists (Duh!), archaeologists, geographers, anthropologists, political and climate scientists, and others. Therefore, formalising the Anthropocene definition is a multi-disciplinary, collaborative scientific effort, as well as an inherently political statement. This talk will explain why.&lt;/p&gt;
+<abstract>The Anthropocene is widely understood to mean the current &lt;em&gt;&amp;quot;period of Earth's history during which humans have a decisive influence on the state, dynamics and future&amp;quot;&lt;/em&gt; of this planet. For several years, scientists in the &lt;a href=&quot;http://quaternary.stratigraphy.org/workinggroups/anthropocene/&quot; title=&quot;Website of the Working Group on the &amp;#39;Anthropocene&amp;#39; (AWG)&quot;&gt;Working Group on the 'Anthropocene' (AWG)&lt;/a&gt; have &lt;a href=&quot;https://www2.le.ac.uk/offices/press/press-releases/2016/august/media-note-anthropocene-working-group-awg&quot; title=&quot;Media note on AWG recommendations&quot;&gt;worked (and voted!)&lt;/a&gt; on defining the beginning of the Anthropocene in geochemical terms. The mid-20&lt;sup&gt;th&lt;/sup&gt; century provides an obvious geochemical 'timestamp': fallout from &lt;a href=&quot;https://media.ccc.de/v/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker&quot; title=&quot;Michael Büker&amp;#39;s &amp;#39;What Ever Happened to Nuclear Weapons?&amp;#39; talk at 31c3&quot;&gt;nuclear weapons detonations&lt;/a&gt;. Which other chemicals and timestamps are being considered for marking the Anthropocene's start? How is 'define-by-committee' even working out for &lt;a href=&quot;http://www.stratigraphy.org/index.php/ics-chart-timescale&quot; title=&quot;International Chronostratigraphic Chart AKA Geological Timescale&quot;&gt;geological epochs&lt;/a&gt;? This talk boils the scientific background of the Anthropocene debate down for non-stratigraphers.</abstract>
+<description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stratigraphy&quot; title=&quot;Wikipedia: Stratigraphy&quot;&gt;Stratigraphers&lt;/a&gt; are geologists, who focus on sediment, rock or ice layers, etc. These 'strata' form by deposition of organic or inorganic material (such as microorganisms or volcanic ash) and provide a records of the history of our planet's surface. Because gas bubbles, isotopes, etc. are captured in the strata, scientists can analyse the geochemistry of the past, date certain events, and more. That kind of data ultimately underlies &lt;a href=&quot;https://xkcd.com/1732/&quot; title=&quot;xkcd comic &amp;#39;Earth Temperature Timeline&amp;#39;&quot;&gt;xkcd's recent 'Earth Temperature Timeline'&lt;/a&gt;. Direct measurements of geochemical signals such as &lt;a href=&quot;https://scripps.ucsd.edu/programs/keelingcurve/&quot; title=&quot;Keeling curve of CO2 concentrations&quot;&gt;atmospheric CO&lt;sub&gt;2&lt;/sub&gt; concentration&lt;/a&gt; and ocean pH started only in the mid-20&lt;sup&gt;th&lt;/sup&gt; century.&lt;/p&gt;
+&lt;p&gt;Besides the &lt;a href=&quot;https://ipcc.ch/&quot; title=&quot;Website of the Intergovernmental Panel on Climate Change&quot;&gt;Intergovernmental Panel on Climate Change&lt;/a&gt;, the AWG is possibly the most diverse scientific committee with most public attention currently. Therefore, defining the Anthropocene is a multi-disciplinary, collaborative scientific effort, as well as an inherently political statement. This talk will explain why.&lt;/p&gt;
 </description>
 <logo></logo>
 <persons>
@@ -2114,7 +2034,7 @@ Findings from investigations have been used by Human Rights Watch, the United Na
 <link href='http://www.konscience.de/tag/anthropozaen/'>KonScience-Episoden zu dem Thema</link>
 <link href='https://www2.le.ac.uk/offices/press/press-releases/2016/august/media-note-anthropocene-working-group-awg'>AWG's status in Aug.'16</link>
 <link href='http://quaternary.stratigraphy.org/workinggroups/anthropocene/'>AWG homepage</link>
-<link href='http://slides.com/kaleimai/33c3-welcome-anthropocene'>draft slides</link>
+<link href='http://slides.com/kaleimai/33c3-welcome-anthropocene'>slides</link>
 </links>
 <attachments>
 </attachments>
@@ -3343,7 +3263,7 @@ Lauri, and what are the changes we should be fighting for?</description>
 <language>en</language>
 <abstract>The long term survival of the human species requires that we become an interplanetary species. But we must answer two big questions: where are we going, and how do we get there? We explore what scientists know (and don’t know) about humanity’s potential future homes both inside and outside the solar system, and then we’ll dive into the technological challenges of (and potential solutions for) getting humans to and colonizing a new planet.</abstract>
 <description>Long the realm of science fiction, interplanetary colonization is now taken more and more seriously by scientists and space agencies alike as technologies come within reach. We will evaluate obstacles and solutions by looking at two topics: Where to go? and How to get there?
-Part 1 explores the options that humans have in expanding to new planets. There are now 3,518 exoplanets in 2,635 planetary systems confirmed. We’ll discuss how astronomers find planets, and how they learn about the conditions there. How do we pick a colonization target based on the data we can gather when there is no way of sending probes there and getting information back in reasonable time like we do in our solar system?
+Part 1 explores the options that humans have in expanding to new planets. There are now 3,439 exoplanets in 2,569 planetary systems confirmed. We’ll discuss how astronomers find planets, and how they learn about the conditions there. How do we pick a colonization target based on the data we can gather when there is no way of sending probes there and getting information back in reasonable time like we do in our solar system?
 Part 2 gives an overview of technologies currently available to get humans to other planets, and what that means in terms of humanity’s expansion. We'll also talk about the technology advancements necessary for truly interstellar colonization.</description>
 <logo>/system/events/logos/000/007/942/large/640px-Spacecolony1.jpg?1474294764</logo>
 <persons>
