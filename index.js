@@ -85,6 +85,9 @@ function chooseTalk (schedule, selected) {
   inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices, default: selected || 0}]).then(function (answers) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
     chooseTalk(schedule, answers.talk.index)
+  }).catch(function (err) {
+    console.log(err)
+    process.exit(1)
   })
 }
 
