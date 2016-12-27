@@ -2,7 +2,7 @@
 
 Chaos Communication Congress 2016 Schedule on the Command Line
 
-[![Build status](https://travis-ci.org/watson/npm-to-hypercore.svg?branch=master)](https://travis-ci.org/watson/npm-to-hypercore)
+[![Build status](https://travis-ci.org/watson/33c3.svg?branch=master)](https://travis-ci.org/watson/33c3)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## Installation
