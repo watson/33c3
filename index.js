@@ -70,7 +70,10 @@ function chooseTalk (schedule, selected) {
   schedule.room.forEach(function (room, roomIndex) {
     if (!room.event) return
     room.event.forEach(function (event, index) {
-      choices.push({name: event.start + ': ' + event.title[0], value: {room: roomIndex, event: index, date: (new Date(event.date[0])).getTime()}})
+      choices.push({
+        name: event.start + ': ' + event.title[0] + ' (' + event.room + ')',
+        value: {room: roomIndex, event: index, date: (new Date(event.date[0])).getTime()}
+      })
     })
   })
 
