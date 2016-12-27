@@ -4,6 +4,7 @@
 var fs = require('fs')
 var xml2js = require('xml2js')
 var inquirer = require('inquirer')
+var nearest = require('nearest-date')
 var cliui = require('cliui')
 
 fs.readFile('schedule.xml', function (err, xml) {
@@ -31,17 +32,23 @@ function chooseTalk (schedule, selected) {
   schedule.room.forEach(function (room, roomIndex) {
     if (!room.event) return
     room.event.forEach(function (event, index) {
-      choices.push({name: event.start + ': ' + event.title[0], value: {room: roomIndex, event: index, date: new Date(event.date[0])}})
+      choices.push({name: event.start + ': ' + event.title[0], value: {room: roomIndex, event: index, date: (new Date(event.date[0])).getTime()}})
     })
   })
 
   choices = choices
     .sort(function (a, b) {
-      return a.value.date.getTime() - b.value.date.getTime()
+      return a.value.date - b.value.date
     }).map(function (choice) {
       choice.value.index = totalIndex++
       return choice
     })
+
+  if (selected === undefined) {
+    selected = nearest(choices.map(function (choice) {
+      return choice.value.date
+    }))
+  }
 
   inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices, default: selected || 0}]).then(function (answers) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
