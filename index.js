@@ -11,8 +11,8 @@ var nearest = require('nearest-date')
 var cliui = require('cliui')
 var argv = require('minimist')(process.argv.slice(2))
 
-var DIR = path.join(os.homedir(), '.33c3')
 var URL = 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xml'
+var CACHE = path.join(os.homedir(), '.33c3', 'schedule.xml')
 
 if (argv.help || argv.h) help()
 else if (argv.update || argv.u) update()
@@ -27,8 +27,8 @@ function help () {
 }
 
 function update () {
-  console.log('Downloading schedule to %s...', DIR)
-  download(URL, DIR, 'schedule.xml', function (err) {
+  console.log('Downloading schedule to %s...', CACHE)
+  download(URL, CACHE, function (err) {
     if (err) throw err
     run()
   })
@@ -55,10 +55,10 @@ function run () {
 }
 
 function load (cb) {
-  fs.stat(path.join(DIR, 'schedule.xml'), function (err) {
-    var schedule = path.join(err ? __dirname : DIR, 'schedule.xml')
-    console.log('Schedule cache:', schedule)
-    fs.readFile(schedule, function (err, xml) {
+  fs.stat(CACHE, function (err) {
+    var filepath = err ? path.join(__dirname, 'schedule.xml') : CACHE
+    console.log('Schedule cache:', filepath)
+    fs.readFile(filepath, function (err, xml) {
       if (err) return cb(err)
       xml2js.parseString(xml, function (err, result) {
         if (err) return cb(err)
