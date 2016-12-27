@@ -7,9 +7,15 @@
     "test": "standard"
   },
   "keywords": [
+    "ccc",
     "33c3",
     "program",
-    "talks"
+    "schedule",
+    "event",
+    "events",
+    "talks",
+    "conf",
+    "conference"
   ],
   "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
   "license": "MIT",
