@@ -81,7 +81,7 @@ function chooseDay (schedule) {
   inquirer.prompt(questions).then(function (answers) {
     chooseTalk(schedule.day[answers.day], 0)
   }).catch(function (err) {
-    console.log(err)
+    console.error(err)
     process.exit(1)
   })
 }
@@ -125,7 +125,7 @@ function chooseTalk (schedule, selected) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
     chooseTalk(schedule, answers.talk.index)
   }).catch(function (err) {
-    console.log(err)
+    console.error(err)
     process.exit(1)
   })
 }
