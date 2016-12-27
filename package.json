@@ -1,0 +1,32 @@
+{
+  "name": "33c3",
+  "version": "0.0.0",
+  "description": "Chaos Communication Congress 2016 Schedule on the Command Line",
+  "bin": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "keywords": [
+    "33c3",
+    "program",
+    "talks"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "dependencies": {
+    "cliui": "^3.2.0",
+    "inquirer": "^2.0.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/33c3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/watson/33c3/issues"
+  },
+  "homepage": "https://github.com/watson/33c3#readme"
+}
