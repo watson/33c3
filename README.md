@@ -13,10 +13,22 @@ npm install 33c3 -g
 
 ## Usage
 
-Simply run the `33c3` command:
+Show the next talk today:
 
 ```
 33c3
+```
+
+Choose a day manually:
+
+```
+33c3 -m
+```
+
+To show help, run:
+
+```
+33c3 --help
 ```
 
 ## License

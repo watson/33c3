@@ -6,21 +6,51 @@ var xml2js = require('xml2js')
 var inquirer = require('inquirer')
 var nearest = require('nearest-date')
 var cliui = require('cliui')
+var argv = require('minimist')(process.argv.slice(2))
 
-fs.readFile('schedule.xml', function (err, xml) {
-  if (err) throw err
-  xml2js.parseString(xml, function (err, result) {
+if (argv.help || argv.h) {
+  help()
+} else if (argv.manual || argv.m) {
+  load(function (err, schedule) {
     if (err) throw err
-    chooseDay(result.schedule)
+    chooseDay(schedule)
   })
-})
+} else {
+  load(function (err, schedule) {
+    if (err) throw err
+    schedule.day.some(function (day, index) {
+      var end = new Date(day.$.end).getTime()
+      if (end > Date.now()) {
+        chooseTalk(schedule.day[index])
+        return true
+      }
+    })
+  })
+}
+
+function help () {
+  console.log('Usage: 33c3 [options]')
+  console.log()
+  console.log(' --help, -h    Show this help')
+  console.log(' --manual, -m  Prompt for day (default to upcoming talk)')
+}
+
+function load (cb) {
+  fs.readFile('schedule.xml', function (err, xml) {
+    if (err) return cb(err)
+    xml2js.parseString(xml, function (err, result) {
+      if (err) return cb(err)
+      cb(null, result.schedule)
+    })
+  })
+}
 
 function chooseDay (schedule) {
   var choices = schedule.day.map(function (_, index) {
     return {name: 'Day ' + (index + 1), value: index}
   })
   inquirer.prompt([{type: 'list', name: 'day', message: 'Choose Day', choices: choices}]).then(function (answers) {
-    chooseTalk(schedule.day[answers.day])
+    chooseTalk(schedule.day[answers.day], 0)
   }).catch(function (err) {
     console.log(err)
     process.exit(1)

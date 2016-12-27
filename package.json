@@ -16,6 +16,7 @@
   "dependencies": {
     "cliui": "^3.2.0",
     "inquirer": "^2.0.0",
+    "minimist": "^1.2.0",
     "nearest-date": "^1.0.0",
     "xml2js": "^0.4.17"
   },
