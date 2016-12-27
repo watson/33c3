@@ -1,47 +1,69 @@
 #!/usr/bin/env node
 'use strict'
 
+var os = require('os')
 var fs = require('fs')
 var path = require('path')
+var download = require('download-to-file')
 var xml2js = require('xml2js')
 var inquirer = require('inquirer')
 var nearest = require('nearest-date')
 var cliui = require('cliui')
 var argv = require('minimist')(process.argv.slice(2))
 
-if (argv.help || argv.h) {
-  help()
-} else if (argv.manual || argv.m) {
-  load(function (err, schedule) {
-    if (err) throw err
-    chooseDay(schedule)
-  })
-} else {
-  load(function (err, schedule) {
-    if (err) throw err
-    schedule.day.some(function (day, index) {
-      var end = new Date(day.$.end).getTime()
-      if (end > Date.now()) {
-        chooseTalk(schedule.day[index])
-        return true
-      }
-    })
-  })
-}
+var DIR = path.join(os.homedir(), '.33c3')
+var URL = 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xml'
+
+if (argv.help || argv.h) help()
+else if (argv.update || argv.u) update()
+else run()
 
 function help () {
   console.log('Usage: 33c3 [options]')
   console.log()
   console.log(' --help, -h    Show this help')
   console.log(' --manual, -m  Prompt for day (default to upcoming talk)')
+  console.log(' --update, -u  Update schedule with new changes')
+}
+
+function update () {
+  console.log('Downloading schedule to %s...', DIR)
+  download(URL, DIR, 'schedule.xml', function (err) {
+    if (err) throw err
+    run()
+  })
+}
+
+function run () {
+  if (argv.manual || argv.m) {
+    load(function (err, schedule) {
+      if (err) throw err
+      chooseDay(schedule)
+    })
+  } else {
+    load(function (err, schedule) {
+      if (err) throw err
+      schedule.day.some(function (day, index) {
+        var end = new Date(day.$.end).getTime()
+        if (end > Date.now()) {
+          chooseTalk(schedule.day[index])
+          return true
+        }
+      })
+    })
+  }
 }
 
 function load (cb) {
-  fs.readFile(path.join(__dirname, 'schedule.xml'), function (err, xml) {
-    if (err) return cb(err)
-    xml2js.parseString(xml, function (err, result) {
+  fs.stat(path.join(DIR, 'schedule.xml'), function (err) {
+    var schedule = path.join(err ? __dirname : DIR, 'schedule.xml')
+    console.log('Schedule cache:', schedule)
+    fs.readFile(schedule, function (err, xml) {
       if (err) return cb(err)
-      cb(null, result.schedule)
+      xml2js.parseString(xml, function (err, result) {
+        if (err) return cb(err)
+        cb(null, result.schedule)
+      })
     })
   })
 }
