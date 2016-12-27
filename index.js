@@ -50,7 +50,13 @@ function chooseDay (schedule) {
   var choices = schedule.day.map(function (_, index) {
     return {name: 'Day ' + (index + 1), value: index}
   })
-  inquirer.prompt([{type: 'list', name: 'day', message: 'Choose Day', choices: choices}]).then(function (answers) {
+  var questions = [{
+    type: 'list',
+    name: 'day',
+    message: 'Choose Day',
+    choices: choices
+  }]
+  inquirer.prompt(questions).then(function (answers) {
     chooseTalk(schedule.day[answers.day], 0)
   }).catch(function (err) {
     console.log(err)
@@ -82,7 +88,15 @@ function chooseTalk (schedule, selected) {
     }))
   }
 
-  inquirer.prompt([{type: 'list', name: 'talk', message: 'Choose Talk', choices: choices, default: selected || 0}]).then(function (answers) {
+  var questions = [{
+    type: 'list',
+    name: 'talk',
+    message: 'Choose Day ' + schedule.$.index + ' Talk',
+    choices: choices,
+    default: selected || 0
+  }]
+
+  inquirer.prompt(questions).then(function (answers) {
     printTalk(schedule.room[answers.talk.room].event[answers.talk.event])
     chooseTalk(schedule, answers.talk.index)
   }).catch(function (err) {
