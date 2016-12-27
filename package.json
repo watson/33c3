@@ -4,7 +4,8 @@
   "description": "Chaos Communication Congress 2016 Schedule on the Command Line",
   "bin": "index.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "update": "curl https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xml > schedule.xml"
   },
   "keywords": [
     "ccc",
