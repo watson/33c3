@@ -2,6 +2,7 @@
 'use strict'
 
 var fs = require('fs')
+var path = require('path')
 var xml2js = require('xml2js')
 var inquirer = require('inquirer')
 var nearest = require('nearest-date')
@@ -36,7 +37,7 @@ function help () {
 }
 
 function load (cb) {
-  fs.readFile('schedule.xml', function (err, xml) {
+  fs.readFile(path.join(__dirname, 'schedule.xml'), function (err, xml) {
     if (err) return cb(err)
     xml2js.parseString(xml, function (err, result) {
       if (err) return cb(err)
