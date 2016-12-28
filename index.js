@@ -15,15 +15,21 @@ var URL = 'https://fahrplan.events.ccc.de/congress/2016/Fahrplan/schedule.xml'
 var CACHE = path.join(os.homedir(), '.33c3', 'schedule.xml')
 
 if (argv.help || argv.h) help()
+else if (argv.version || argv.v) version()
 else if (argv.update || argv.u) update()
 else run()
 
 function help () {
   console.log('Usage: 33c3 [options]')
   console.log()
-  console.log(' --help, -h    Show this help')
-  console.log(' --manual, -m  Prompt for day (default to upcoming talk)')
-  console.log(' --update, -u  Update schedule with new changes')
+  console.log(' --help, -h     Show this help')
+  console.log(' --version, -v  Show version')
+  console.log(' --manual, -m   Prompt for day (default to upcoming talk)')
+  console.log(' --update, -u   Update schedule with new changes')
+}
+
+function version () {
+  console.log(require('./package').version)
 }
 
 function update () {
