@@ -22,10 +22,11 @@ else run()
 function help () {
   console.log('Usage: 33c3 [options]')
   console.log()
-  console.log(' --help, -h     Show this help')
-  console.log(' --version, -v  Show version')
-  console.log(' --manual, -m   Prompt for day (default to upcoming talk)')
-  console.log(' --update, -u   Update schedule with new changes')
+  console.log('Options:')
+  console.log('  --help, -h     Show this help')
+  console.log('  --version, -v  Show version')
+  console.log('  --manual, -m   Prompt for day (default to upcoming talk)')
+  console.log('  --update, -u   Update schedule with new changes')
 }
 
 function version () {
