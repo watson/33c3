@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <schedule>
-<version>NOT A BUG</version>
+<version>DUPLICATE</version>
 <conference>
 <acronym>33c3</acronym>
 <title>33. Chaos Communication Congress</title>
@@ -365,6 +365,7 @@ Last but not least we will go back for the hardware layer, showing that sometime
 <links>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/115/original/33c3-ray-lockpicking-in-the-IoT.pdf?1482895562'>Updated Slides</attachment>
 </attachments>
 </event>
 <event guid='700a07e7-a9c4-437b-a4c5-4491b23a9b4a' id='7946'>
@@ -648,6 +649,8 @@ In my talk I will provide solid answers to these and related questions.</descrip
 <link href='https://netzpolitik.org/2016/informatik-gutachten-eine-telefonnummer-ist-ausreichend-um-eine-person-mit-einer-drohnen-rakete-zu-treffen/'>Informatik-Gutachten: Eine Telefonnummer ist ausreichend, um eine Person mit einer Drohnen-Rakete zu treffen</link>
 </links>
 <attachments>
+<attachment href='/attachments/original/missing.png'>file</attachment>
+<attachment href='/system/event_attachments/attachments/000/003/113/original/Slides_Geolocation_methods_in_mobile_networks.pdf?1482882313'>Slides</attachment>
 </attachments>
 </event>
 <event guid='80190dbb-bf17-40a0-95e4-18a32bcd37e4' id='8076'>
@@ -1147,6 +1150,7 @@ We show how these weaknesses translate into disclosure of traveler's personal in
 <links>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/114/original/33C3-SRLabs-Travel_Hacking.v1.pdf?1482889495'>Slides</attachment>
 </attachments>
 </event>
 <event guid='fd205d0d-d767-4ff6-9771-9f2d4c933fe7' id='8143'>
@@ -1546,11 +1550,12 @@ In particular, we will explain how they tend to operate and we will dive into te
 <language>de</language>
 <abstract>Jeder weiß ungefähr was ein Mikroskop ist und vielleicht hat man auch mal davon gehört das da immernoch dran geforscht wird – Stichwort Hochauflösungsmikroskopie (Nobelpreis 2014 in Chemie). Es gibt deutlich mehr Mikroskope in der professionellen Forschung als es Teleskope gibt, deutlich mehr – und da könnte man sich jetzt fragen: &quot;Warum sehe ich so viele Bilder von Sterne, aber kaum Mikroskopiebilder von öffentlichen Einrichtungen und Stellen?&quot;. Um diese Frage zu beantworten will ich kurz in die Welt der Hochauflösungsmikroskopie einführen und die Techniken erklären. Ein bisschen über die Community erzählen und versuchen klar zu machen, warum es hier mit der Offenheit noch etwas hapert. UND: Es soll auch mikroskopiert werden.</abstract>
 <description>Ich habe die letzten 6 Jahre ein Mikroskop gebaut. Eins, dass mit Licht Dinge sehen kann unterhalb der Beugungsgrenze von Licht, in mehreren Farben, in 3D. Das Ding ist fertig – so fertig wie etwas sein kann, das man als Doktorarbeitsprojekt bezeichnet. Ich will das niemandem verkaufen, die Forschung ist Veröffentlicht, unsere Software dazu ist open source. Für mich war die Arbeit daran Eintrittskarte in eine andere Welt. Ich will erzählen was Hochauflösungsmikroskopie ist, die drei verschiedenen Ansätze dazu (PALM/STORM, STED, SIM), wie sie sich ergänzen und wie die technologische Entwicklung des 21. Jahrhunderts das erst möglich gemacht hat. Wie Techniken basierend auf Laserphysik (STED), stochastischem Blinken von Molekülen (PALM/STORM) oder schneller Fouriertransformation (SIM) uns ermöglichen tiefer in Zellen hinein zu schauen – und man sich plötzlich Gedanken darüber machen muss wie man etwas in einem Bild darstellt, dass eigentlich gar kein richtiges Bild ist, sondern ein vielschichtiges Messergebnis. Aber auch die Community in diesem Feld ist interessant. Langsam aber sicher verbreitet sich der open science Gedanke, immer mehr Software ist Quelloffen, es gibt sogar einen Jährlichen Wettbewerb für die beste Bildrekonstruktionssoftware, immer mehr Anleitungen zum Eigenbau machen die Runde, wie zum Beispiel Arduino Lösungen für Kameratimings, Laser aus Discobeleuchtungen und hier und da finden sich auch offene Daten. Trotzdem werden Mikroskope wohl nie dem Teleskop den Rang ablaufen, denn das was man als interessierter Bastler, oder auch als Profi auf diesem Gebiet, zu Hause anstellen kann ist begrenzt. Was geht will ich auf der Bühne zeigen mit kostengünstigen USB-Mikroskopen und evtl. mit einem kleinen Eigenbau.</description>
-<logo></logo>
+<logo>/system/events/logos/000/008/237/large/Logo-talk-33c3.png?1482882305</logo>
 <persons>
 <person id='7027'>André Lampe</person>
 </persons>
 <links>
+<link href='http://scienceblogs.de/diekleinendinge/'>Blog (dort gibts ne Liste mit Links aus dem Talk - nach dem Talk)</link>
 </links>
 <attachments>
 </attachments>
@@ -1584,6 +1589,7 @@ The presentation will introduce the life of data, the role of computing for phys
 <link href='https://cern.ch/cling'>cling, the C++ interpreter</link>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/118/original/33C3-AxelNaumann-CERN.pdf?1482918763'>The Slides</attachment>
 </attachments>
 </event>
 <event guid='60b52369-b0ee-455f-904a-4dfef49596eb' id='8349'>
@@ -1970,6 +1976,7 @@ Im kurzweiligen Abend-Vortrag geben sie einen kleinen Abriss über die Geschicht
 <link href='https://relay70.metatron.ai/'>Research blog of maxigas</link>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/116/original/slides.pdf?1482918074'>Slides</attachment>
 </attachments>
 </event>
 <event guid='e0758eb2-0282-40d7-9c41-de607eb3d494' id='7909'>
@@ -2185,6 +2192,7 @@ Der Vortrag fokussiert auf die Blockchain-Technologie. Funktionen und Implementa
 <links>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/120/original/handout.pdf?1482926771'>Handouts (revision 0.9)</attachment>
 </attachments>
 </event>
 <event guid='1b27dbeb-cffc-48a1-b2e6-b2011c338a50' id='8416'>
@@ -2320,6 +2328,31 @@ Although the new hardware-revision of the button makes use of the controller loc
 <logo>/system/events/logos/000/008/398/large/messowires.jpg?1476689522</logo>
 <persons>
 <person id='5233'>hunz</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='96f837e6-f137-4b23-88d9-8326a9ac9196' id='8461'>
+<date>2016-12-29T00:45:00+01:00</date>
+<start>00:45</start>
+<duration>01:30</duration>
+<room>Saal 2</room>
+<slug>33c3-8461-fnord-jahresruckblick_stream</slug>
+<recording>
+<license></license>
+<optout>false</optout>
+</recording>
+<title>Fnord-Jahresrückblick: Stream</title>
+<subtitle></subtitle>
+<track>Entertainment</track>
+<type>other</type>
+<language></language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
 </persons>
 <links>
 </links>
@@ -2934,6 +2967,7 @@ This talk will present basics of SpinalHDL and then show by which way this alter
 <link href='https://github.com/SpinalHDL/SpinalHDL'>SpinalHDL repository</link>
 </links>
 <attachments>
+<attachment href='/system/event_attachments/attachments/000/003/119/original/presentation_move_forward.pdf?1482921296'>Presentations slides</attachment>
 </attachments>
 </event>
 <event guid='90c2f1c6-c32e-4bb2-b8a0-db6b4e24e4b3' id='8042'>
@@ -3022,7 +3056,7 @@ The proliferation of commercial tools for targeted digital surveillance presents
 Using the Mansoor attack as a case study, we will provide a window into how researchers at Citizen Lab leverage and fingerprint these patterns to track nation-state level attacks against human rights defenders and journalists. Drawing on cases from the UAE and beyond, we will discuss how we work with targets and victims, conduct Internet scanning, and fingerprint C&amp;C servers. We will conclude with a discussion of some trends that we have observed in commercial malcode sold to nation state actors.</description>
 <logo></logo>
 <persons>
-<person id='6653'>wrm</person>
+<person id='6653'>Bill Marczak</person>
 <person id='7208'>John Scott-Railton</person>
 </persons>
 <links>
@@ -3356,6 +3390,31 @@ Climb the distance ladder and get to know our place in Space from kilometers to 
 <logo>/system/events/logos/000/007/861/large/HUDF.jpg?1473189037</logo>
 <persons>
 <person id='4920'>Michael Büker</person>
+</persons>
+<links>
+</links>
+<attachments>
+</attachments>
+</event>
+<event guid='cfe31c23-3b1e-4dc3-a7ac-15f538cdfd18' id='8460'>
+<date>2016-12-30T00:15:00+01:00</date>
+<start>00:15</start>
+<duration>01:30</duration>
+<room>Saal 1</room>
+<slug>33c3-8460-methodisch_inkorrekt_stream</slug>
+<recording>
+<license></license>
+<optout>true</optout>
+</recording>
+<title>Methodisch Inkorrekt Stream</title>
+<subtitle></subtitle>
+<track>Entertainment</track>
+<type>other</type>
+<language>en</language>
+<abstract></abstract>
+<description></description>
+<logo></logo>
+<persons>
 </persons>
 <links>
 </links>
@@ -4100,7 +4159,7 @@ I will share my experiments in assessing different candies for their engineering
 <event guid='d51d9e44-947b-4a09-94ad-c31c5cf5e5e1' id='8020'>
 <date>2016-12-30T00:15:00+01:00</date>
 <start>00:15</start>
-<duration>01:00</duration>
+<duration>01:30</duration>
 <room>Saal G</room>
 <slug>33c3-8020-methodisch_inkorrekt</slug>
 <recording>
@@ -4807,41 +4866,6 @@ Im Zuge von noch mehr Transparenz, Kritik &amp; Selbstkritik und kontinuierliche
 </event>
 </room>
 <room name='Saal 2'>
-<event guid='10253100-7788-4aae-9479-c0cddf282d9d' id='8366'>
-<date>2016-12-30T11:30:00+01:00</date>
-<start>11:30</start>
-<duration>00:30</duration>
-<room>Saal 2</room>
-<slug>33c3-8366-mass_surveillance_through_computational_linguistics_and_human_language_technology</slug>
-<recording>
-<license>CC BY 4.0</license>
-<optout>false</optout>
-</recording>
-<title>Mass Surveillance through Computational Linguistics and Human Language Technology</title>
-<subtitle>Mind-sets, state-of-the-art methods and practices according to official documents including leaks</subtitle>
-<track>Science</track>
-<type>lecture</type>
-<language>en</language>
-<abstract>Even though the Snowden revelations for the first time clearly show that mass surveillance of communications is carried out on a global level, little knowledge seems to be available to the general public as well as the hacker community how these so-called COMINT operations actually work. The talk focuses on mass surveillance based on methods known from research of the interdiscplinary field of Computationanal Linguistics (or Natural Language Processing) and demonstrates how generation of selectors for mass surveilling text messages can occur.</abstract>
-<description>Since the globalized Echelon system of the NSA surveillance complex was reveilled in 1988 by investigative journalist Duncan Campbell, it's known that keyword-based surveillance forms exist, which classify as mass surveillance, because all communications in reach are affected.
-
-However, little knowledge is available concerning the nature of these words, which are supposed to be the needles the secret services search for in the haystack. Even though different leaks exist, showing different forms of hard selectors (like telephone numbers or email addresses of high-ranking policians or economic actors), there's also evidence for soft selectors, targeting no specific persons, but whole groups or populations.
-
-There's no clear knowledge available of how such selectors are defined. However, combining insights from Snowden and WikiLeaks documents, taking into account the &quot;neutral&quot; state-of-the-art research in the field of Computational Linguistics and Human Language Technology, but also specific surveillance research (e.g., from the EU-sponsored INDECT project including their scaring assumptions about human nature) and own experiments done by the author during his research, a much deeper understanding of the selectors' nature can be achieved. As such, the talk helps to demistify the COMINT work and turns its supposed &quot;secret knowledge&quot; to the public. The talk also shows that the application of such methods by principle suffer from catastrophic false-positive rates, thus affecting lots of innocent people in any case, even though governments wants us to believe the opposite, telling us stories of precise searches being carried out only.
-
-The speaker by education is Computational Linguist, Sociologist and Neuroinformatician. As activist of the Chaos Computer Club in Switzerland (CCC-CH), he not only fought a surveillance law introducing extended mass surveillance – including selector search of communications in Switzerland, but also focused his master thesis on exactly this topic.</description>
-<logo></logo>
-<persons>
-<person id='4572'>hernani</person>
-</persons>
-<links>
-<link href='https://archive.org/details/MA_computerlinguistikmassenueberwachung'>Master thesis of the speaker (DE)</link>
-<link href='https://www.nachrichtendienstgesetz.ch/'>Page against the surveillance law (NDG) mentioned in the talk (DE)</link>
-<link href='https://twitter.com/vecirex'>@vecirex (Twitter)</link>
-</links>
-<attachments>
-</attachments>
-</event>
 <event guid='e26852ae-9efe-47a0-9e65-3bbd120f7422' id='8225'>
 <date>2016-12-30T12:15:00+01:00</date>
 <start>12:15</start>
