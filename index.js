@@ -48,15 +48,22 @@ function run () {
       chooseDay(schedule)
     })
   } else {
+    console.log('Loading upcoming talks (select other days using --manual)...')
     load(function (err, schedule) {
       if (err) throw err
-      schedule.day.some(function (day, index) {
+      // find upcoming talks
+      var upcoming = schedule.day.some(function (day, index) {
         var end = new Date(day.$.end).getTime()
         if (end > Date.now()) {
           chooseTalk(schedule.day[index])
           return true
         }
       })
+      // if no upcoming talks were found, fall back to manual selection
+      if (!upcoming) {
+        console.log('No upcoming talks found! Falling back to manual selection...')
+        chooseDay(schedule)
+      }
     })
   }
 }
